@@ -1,0 +1,24 @@
+.Container {
+  padding: 20px 5px;
+  text-align: center;
+}
+
+.Title {
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 10px;
+  background: -webkit-linear-gradient(#00d4ff, #5773f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.Input {
+  width: 300px;
+}
