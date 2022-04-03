@@ -1,0 +1,14 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Text {
+  margin-right: 15px;
+  font-size: 20px;
+  line-height: 1.17;
+  background: -webkit-linear-gradient(#00d4ff, #5773f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
