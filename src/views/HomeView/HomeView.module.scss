@@ -1,0 +1,46 @@
+.Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 5px;
+}
+
+.Wraper {
+  margin-left: 15px;
+  text-align: center;
+}
+
+.Title {
+  font-size: 36px;
+  line-height: 1.17;
+  margin-bottom: 10px;
+
+  background: -webkit-linear-gradient(#00d4ff, #5773f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.HomeText {
+  display: inline-flex;
+  font-size: 24px;
+  line-height: 1.14;
+  margin-right: 5px;
+}
+
+.HomeSpan {
+  margin: 10px;
+}
+
+.HomeLink {
+  font-size: 24px;
+  line-height: 1.14;
+  color: #000;
+  text-transform: uppercase;
+}
+
+.HomeLink:hover,
+.HomeLink:focus {
+  background: -webkit-linear-gradient(#00d4ff, #5773f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
