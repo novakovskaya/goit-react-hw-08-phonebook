@@ -1,0 +1,40 @@
+.AuthList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.AuthItem {
+  width: 100px;
+  font-size: 24px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  background: rgb(87, 115, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(87, 115, 246, 0.9066001400560224) 29%,
+    rgba(0, 212, 255, 0.6797093837535014) 97%
+  );
+  border-radius: 4px;
+  text-align: center;
+  list-style: none;
+
+  transition: transform 250ms linear;
+}
+
+.AuthItem:not(:last-child) {
+  margin-right: 25px;
+}
+
+.AuthItem:hover {
+  transform: scale(1.1);
+}
+
+.AuthLink {
+  color: #fff;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+}
