@@ -1,0 +1,23 @@
+.Section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 500px;
+  margin: 20px auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  background: rgb(87, 115, 246);
+  background: linear-gradient(
+    90deg,
+    rgba(87, 115, 246, 0.9066001400560224) 29%,
+    rgba(0, 212, 255, 0.6797093837535014) 97%
+  );
+  border-radius: 10px;
+}
+
+.Title {
+  margin-bottom: 20px;
+  color: #ffffff;
+}
