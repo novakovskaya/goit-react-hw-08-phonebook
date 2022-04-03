@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.4);
+}
+
+.Navigation {
+  padding: 10px;
+  font-size: 24px;
+  background: -webkit-linear-gradient(#00d4ff, #5773f6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-decoration: none;
+  transition: transform 250ms linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
