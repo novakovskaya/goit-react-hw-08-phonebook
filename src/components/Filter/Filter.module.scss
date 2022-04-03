@@ -1,0 +1,18 @@
+.Label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.Input {
+  max-width: 300px;
+  margin-top: 5px;
+  padding: 5px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+
+  &:focus {
+    box-shadow: 1px 2px 2px #5773f6;
+  }
+}
