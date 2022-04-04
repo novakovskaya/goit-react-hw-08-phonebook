@@ -2,10 +2,10 @@ import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from 'redux/auth';
 
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import Alert from '@mui/material/Alert';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from './RegisterView.module.scss';
 
 const theme = createTheme({
@@ -82,6 +82,19 @@ const RegisterView = () => {
           <TextField
             className={styles.Input}
             label="Password"
+            type="password"
+            name="password"
+            value={password}
+            margin="dense"
+            size="small"
+            color="primary"
+            variant="standard"
+            onChange={handleChange}
+          />
+
+          <TextField
+            className={styles.Input}
+            label="Confirm password"
             type="password"
             name="password"
             value={password}

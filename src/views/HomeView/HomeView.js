@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+
 import phonebook from 'images/phone.png';
 import styles from './HomeView.module.scss';
 

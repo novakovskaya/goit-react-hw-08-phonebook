@@ -1,14 +1,14 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { contactsSelectors, contactsOperations } from 'redux/contacts';
-import { useEffect } from 'react';
 import { TailSpin } from 'react-loader-spinner';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-import { Section } from '../components/Section';
-import { ContactForm } from '../components/ContactForm';
-import { ContactList } from '../components/ContactList';
-import { Filter } from '../components/Filter';
+import { Section } from 'components/Section';
+import { ContactForm } from 'components/ContactForm';
+import { ContactList } from 'components/ContactList';
+import { Filter } from 'components/Filter';
 
 const ContactsView = () => {
   const dispatch = useDispatch();
@@ -29,7 +29,7 @@ const ContactsView = () => {
           <TailSpin
             heigth="80"
             width="80"
-            color="#A5CED0"
+            color="#5773f6"
             ariaLabel="loading"
           />
         ) : (
