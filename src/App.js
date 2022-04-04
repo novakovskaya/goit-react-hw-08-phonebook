@@ -1,6 +1,9 @@
-import { lazy, useEffect, Suspense } from 'react';
+import React, { lazy, useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Switch } from 'react-router-dom';
+import { TailSpin } from 'react-loader-spinner';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import { Container } from './components/Container';
 import { AppBar } from 'components/AppBar';
@@ -33,7 +36,16 @@ const App = () => {
 
       {!isFetchingCurrentUser && (
         <Switch>
-          <Suspense fallback={<p>Loading...</p>}>
+          <Suspense
+            fallback={
+              <TailSpin
+                heigth="60"
+                width="60"
+                color="#5773f6"
+                ariaLabel="loading"
+              />
+            }
+          >
             <PublicRoute exact path="/" restricted redirectTo="/contacts">
               <HomeView />
             </PublicRoute>
@@ -52,6 +64,7 @@ const App = () => {
           </Suspense>
         </Switch>
       )}
+      <ToastContainer autoClose={1500} />
     </Container>
   );
 };
