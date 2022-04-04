@@ -4,8 +4,8 @@ import { contactsSelectors, contactsOperations } from 'redux/contacts';
 import { nanoid } from 'nanoid';
 import { toast } from 'react-toastify';
 
-import Button from '@mui/material/Button';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 import styles from './ContactForm.module.scss';
 
 const theme = createTheme({
