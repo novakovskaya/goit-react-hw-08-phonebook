@@ -5,6 +5,7 @@ import { contactsSelectors, contactsOperations } from 'redux/contacts';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import Button from '@mui/material/Button';
+import DeleteIcon from '@mui/icons-material/Delete';
 import styles from './ContactList.module.scss';
 
 const theme = createTheme({
@@ -38,6 +39,7 @@ export const ContactList = () => {
               onClick={() => onDeleteContact(id)}
             >
               Delete
+              <DeleteIcon sx={{ fontSize: 20 }} />
             </Button>
           </ThemeProvider>
         </li>
