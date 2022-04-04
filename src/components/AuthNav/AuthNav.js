@@ -4,7 +4,7 @@ import styles from './AuthNav.module.scss';
 
 export const AuthNav = () => {
   return (
-    <div>
+    <nav>
       <ul className={styles.AuthList}>
         <li className={styles.AuthItem}>
           <Link to="/register" className={styles.AuthLink}>
@@ -17,6 +17,6 @@ export const AuthNav = () => {
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 };
