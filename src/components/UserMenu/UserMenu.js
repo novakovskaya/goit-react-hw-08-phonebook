@@ -1,8 +1,10 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { authSelectors, authOperations } from 'redux/auth';
+import avatar from 'images/avatar.png';
 
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import styles from './UserMenu.module.scss';
 
@@ -20,6 +22,7 @@ export const UserMenu = () => {
 
   return (
     <div className={styles.Container}>
+      <Avatar alt="user avatar" src={avatar} sx={{ width: 40, height: 40 }} />
       <p className={styles.Text}>Welcome, {name}</p>
 
       <ThemeProvider theme={theme}>
