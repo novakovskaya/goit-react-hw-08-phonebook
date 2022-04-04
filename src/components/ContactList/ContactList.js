@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useSelector, useDispatch } from 'react-redux';
 import { contactsSelectors, contactsOperations } from 'redux/contacts';
-import Button from '@mui/material/Button';
+
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Button from '@mui/material/Button';
 import styles from './ContactList.module.scss';
 
 const theme = createTheme({
