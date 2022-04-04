@@ -84,19 +84,7 @@ const RegisterView = () => {
             label="Password"
             type="password"
             name="password"
-            value={password}
-            margin="dense"
-            size="small"
-            color="primary"
-            variant="standard"
-            onChange={handleChange}
-          />
-
-          <TextField
-            className={styles.Input}
-            label="Confirm password"
-            type="password"
-            name="password"
+            id="password"
             value={password}
             margin="dense"
             size="small"
