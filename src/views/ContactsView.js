@@ -15,7 +15,9 @@ const ContactsView = () => {
   const isLoading = useSelector(contactsSelectors.getIsLoading);
   const isError = useSelector(contactsSelectors.getError);
 
-  useEffect(() => dispatch(contactsOperations.fetchContacts()), [dispatch]);
+  useEffect(() => {
+    dispatch(contactsOperations.fetchContacts());
+  }, [dispatch]);
 
   return (
     <>
