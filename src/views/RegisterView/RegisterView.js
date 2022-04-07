@@ -103,7 +103,6 @@ const RegisterView = () => {
             Sign Up
           </Button>
         </ThemeProvider>
-
         {error && (
           <Alert severity="error">
             This username is already taken, please choose a different one.
