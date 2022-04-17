@@ -51,13 +51,13 @@ const App = () => {
             <PublicRoute exact path="/" restricted redirectTo="/contacts">
               <HomeView />
             </PublicRoute>
-            <PublicRoute path="/register" restricted redirectTo="/">
+            <PublicRoute exact path="/register" restricted redirectTo="/">
               <RegisterView />
             </PublicRoute>
-            <PublicRoute path="/login" restricted redirectTo="/contacts">
+            <PublicRoute exact path="/login" restricted redirectTo="/contacts">
               <LoginView />
             </PublicRoute>
-            <PrivateRoute path="/contacts" redirectTo="/login">
+            <PrivateRoute exact path="/contacts" redirectTo="/login">
               <ContactsView />
             </PrivateRoute>
           </Switch>

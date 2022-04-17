@@ -13,11 +13,11 @@ const HomeView = () => {
         <h1 className={styles.Title}>Phonebook</h1>
 
         <p className={styles.HomeText}>To start using our app, please</p>
-        <Link to="/login" className={styles.HomeLink}>
+        <Link exact to="/login" className={styles.HomeLink}>
           Log in
         </Link>
         <span className={styles.HomeSpan}>/</span>
-        <Link to="/register" className={styles.HomeLink}>
+        <Link exact to="/register" className={styles.HomeLink}>
           Sign up
         </Link>
       </div>
