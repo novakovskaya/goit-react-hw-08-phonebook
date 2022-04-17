@@ -7,12 +7,12 @@ export const AuthNav = () => {
     <nav>
       <ul className={styles.AuthList}>
         <li className={styles.AuthItem}>
-          <Link exact to="/register" className={styles.AuthLink}>
+          <Link to="/register" className={styles.AuthLink}>
             Sign Up
           </Link>
         </li>
         <li className={styles.AuthItem}>
-          <Link exact to="/login" className={styles.AuthLink}>
+          <Link to="/login" className={styles.AuthLink}>
             Log In
           </Link>
         </li>

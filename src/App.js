@@ -1,6 +1,6 @@
 import React, { lazy, useEffect, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { Switch } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { TailSpin } from 'react-loader-spinner';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -47,20 +47,40 @@ const App = () => {
             />
           }
         >
-          <Switch>
-            <PublicRoute exact path="/" restricted>
-              <HomeView />
-            </PublicRoute>
-            <PublicRoute path="/register" restricted redirectTo="/">
-              <RegisterView />
-            </PublicRoute>
-            <PublicRoute path="/login" restricted>
-              <LoginView />
-            </PublicRoute>
-            <PrivateRoute path="/contacts">
-              <ContactsView />
-            </PrivateRoute>
-          </Switch>
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <PublicRoute restricted>
+                  <HomeView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/register"
+              element={
+                <PublicRoute restricted redirectTo="/">
+                  <RegisterView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/login"
+              element={
+                <PublicRoute restricted>
+                  <LoginView />
+                </PublicRoute>
+              }
+            />
+            <Route
+              path="/contacts"
+              element={
+                <PrivateRoute>
+                  <ContactsView />
+                </PrivateRoute>
+              }
+            />
+          </Routes>
         </Suspense>
       )}
       <ToastContainer autoClose={1500} />
