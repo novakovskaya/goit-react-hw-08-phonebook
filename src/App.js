@@ -27,10 +27,9 @@ const ContactsView = lazy(() =>
 const App = () => {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
-  const token = useSelector(authSelectors.getToken);
 
   useEffect(() => {
-    token && dispatch(authOperations.fetchCurrentUser());
+    dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
   return (
