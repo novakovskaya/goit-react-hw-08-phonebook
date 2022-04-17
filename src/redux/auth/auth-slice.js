@@ -55,8 +55,6 @@ const authSlice = createSlice({
     },
     [fetchCurrentUser.rejected](state, _) {
       state.isFetchingCurrentUser = false;
-      state.isLoggedIn = false;
-      state.token = null;
     },
   },
 });
