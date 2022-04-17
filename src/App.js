@@ -27,9 +27,10 @@ const ContactsView = lazy(() =>
 const App = () => {
   const dispatch = useDispatch();
   const isFetchingCurrentUser = useSelector(authSelectors.getIsFetchingCurrent);
+  const token = useSelector(authSelectors.getToken);
 
   useEffect(() => {
-    dispatch(authOperations.fetchCurrentUser());
+    token && dispatch(authOperations.fetchCurrentUser());
   }, [dispatch]);
 
   return (
@@ -48,18 +49,15 @@ const App = () => {
           }
         >
           <Switch>
-            <PublicRoute exact path="/" redirectTo="/contacts">
+            <PublicRoute exact path="/" restricted redirectTo="/contacts">
               <HomeView />
             </PublicRoute>
-
             <PublicRoute path="/register" restricted redirectTo="/">
               <RegisterView />
             </PublicRoute>
-
             <PublicRoute path="/login" restricted redirectTo="/contacts">
               <LoginView />
             </PublicRoute>
-
             <PrivateRoute path="/contacts" redirectTo="/login">
               <ContactsView />
             </PrivateRoute>
