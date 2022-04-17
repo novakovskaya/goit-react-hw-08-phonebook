@@ -5,7 +5,7 @@ import { authSelectors } from 'redux/auth';
 
 export const PublicRoute = ({
   children,
-  redirectTo = '/',
+  redirectTo = '/contacts',
   restricted = false,
   ...routeProps
 }) => {
